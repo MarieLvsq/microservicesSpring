@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
+import org.hibernate.validator.constraints.Length;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
@@ -19,6 +21,7 @@ public abstract class Personne {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
+	@Length(min=3, max=30, message = "Le nombre de caractères du nom de la personne doit être compris entre 3 et 30 au sens large.")    
 	private String nom;
 
 	private String prenom;
