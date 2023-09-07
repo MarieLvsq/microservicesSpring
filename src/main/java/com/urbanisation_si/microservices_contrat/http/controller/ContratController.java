@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.urbanisation_si.exceptions.ResourceNotFoundException;
 import com.urbanisation_si.microservices_assure.dao.AssureRepository;
 import com.urbanisation_si.microservices_contrat.dao.ContratRepository;
 import com.urbanisation_si.microservices_contrat.model.Contrat;
 import com.urbanisation_si.microservices_produit.dao.ProduitRepository;
-import com.urbanisation_si.microservices_produit.http.controller.ResourceNotFoundException;
 
 import io.swagger.annotations.ApiOperation;
 
@@ -95,16 +95,4 @@ public class ContratController {
 	    }
 	}
 
-	// Helper method to check if Assure exists
-	private boolean assureExists(Long numeroAssure) {
-		// Use AssureRepository to check if an Assure with the given numeroAssure exists
-		return assureRepository.existsByNumeroAssure(numeroAssure);
-	}
-
-	// Helper method to check if Produit exists
-	private boolean produitExists(Long numeroProduit) {
-		// Use ProduitRepository to check if a Produit with the given numeroProduit
-		// exists
-		return produitRepository.existsByNumeroProduit(numeroProduit);
-	}
 }

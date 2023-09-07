@@ -10,5 +10,4 @@ public interface ProduitRepository extends CrudRepository<Produit, Integer> {
 	@Query("SELECT p FROM Produit p WHERE p.numeroProduit = :numeroProduit")
 	Produit findByNumeroProduit(@Param("numeroProduit") Long numeroProduit);
 
-	boolean existsByNumeroProduit(Long numeroProduit);
 }

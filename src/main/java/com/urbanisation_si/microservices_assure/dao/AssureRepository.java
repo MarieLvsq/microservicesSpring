@@ -9,5 +9,4 @@ public interface AssureRepository extends CrudRepository<Assure, Integer>{
 
 	List<Assure> findByNomAndPrenom(String nom, String prenom);
 
-	boolean existsByNumeroAssure(Long numeroAssure);
 }

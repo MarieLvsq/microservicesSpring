@@ -1,4 +1,4 @@
-package com.urbanisation_si.microservices_produit.http.controller;
+package com.urbanisation_si.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
 	public ResourceNotFoundException(String message) {
