@@ -8,4 +8,6 @@ import com.urbanisation_si.microservices_assure.model.Assure;
 public interface AssureRepository extends CrudRepository<Assure, Integer>{
 
 	List<Assure> findByNomAndPrenom(String nom, String prenom);
+
+	boolean existsByNumeroAssure(Long numeroAssure);
 }
